@@ -1,0 +1,34 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+    About
+{% endblock %}
+{% block content %}
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
+            <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
+                <div class="flex-shrink-0">
+                    <div class="w-48 h-48 rounded-full overflow-hidden bg-slate-100 border-4 border-blue-50 flex items-center justify-center">
+                        <span class="text-slate-400 font-medium text-sm">Upload Headshot</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h1 class="text-3xl font-extrabold text-slate-900 mb-4">About Me</h1>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Hello! I'm Emily Meadows, a current MSBA student with a strong passion for data analytics and problem-solving. My goal is to transform complex datasets into actionable insights that drive strategic decisions.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        I am constantly exploring new technologies and methodologies to enhance my analytical skills. My coursework and projects focus on practical, real-world applications of data science.
+                    </p>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4">Technical Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md font-medium text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md font-medium text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md font-medium text-sm">Data Visualization</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md font-medium text-sm">Machine Learning</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md font-medium text-sm">Django</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

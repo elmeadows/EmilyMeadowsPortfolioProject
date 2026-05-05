@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %} - Emily Meadows</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+    <nav class="bg-blue-600 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="{% url 'home' %}" class="text-xl font-bold text-white tracking-tight">Emily Meadows</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="{% url 'home' %}" class="text-blue-100 hover:text-white font-medium transition-colors">Home</a>
+                    <a href="{% url 'about' %}" class="text-blue-100 hover:text-white font-medium transition-colors">About</a>
+                    <a href="{% url 'projects' %}" class="text-blue-100 hover:text-white font-medium transition-colors">Projects</a>
+                    <a href="{% url 'skills' %}" class="text-blue-100 hover:text-white font-medium transition-colors">Skills</a>
+                    <a href="{% url 'resume' %}" class="text-blue-100 hover:text-white font-medium transition-colors">Resume</a>
+                    <a href="{% url 'contact' %}" class="text-blue-100 hover:text-white font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-center text-center">
+            <p class="text-slate-500 text-sm">© {% now "Y" %} Emily Meadows. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
