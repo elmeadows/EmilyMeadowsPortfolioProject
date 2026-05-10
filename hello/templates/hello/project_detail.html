@@ -140,6 +140,38 @@
                     </section>
                 </div>
             {% endif %}
+            {% if project.title == "n8n Agent Workflow Project" %}
+                <div class="grid gap-6 mb-8">
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">One-Sentence Summary</h2>
+                        <p class="text-slate-600 leading-7">Workflow for processing maintenance requests for a Handyman business.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Business Problem</h2>
+                        <p class="text-slate-600 leading-7">Develop a multi-agent system in n8n Cloud using drag-and-drop nodes. Create a workflow with four agent workflows (Intake, Pricing, Scheduling, Comms) that returns a final business-ready output.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Tools Used</h2>
+                        <p class="text-slate-600 leading-7">n8n Cloud, Google Gemini, JavaScript.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Key Features</h2>
+                        <p class="text-slate-600 leading-7">Intake Agent, Pricing Agent, Scheduling Agent, Communication Agent, email to client including scheduling information.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Your Role / Contribution</h2>
+                        <p class="text-slate-600 leading-7">Created each hook/stage needed for each Agent, wrote JavaScript as necessary, implemented Gemini into intake processing.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Biggest Challenge</h2>
+                        <p class="text-slate-600 leading-7">I was previously unfamiliar with writing JavaScript, so learning as I went required several corrections later.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">What I Learned</h2>
+                        <p class="text-slate-600 leading-7">How to start-to-finish generate workflow, how to structure the intake form to best fit AI's processing.</p>
+                    </section>
+                </div>
+            {% endif %}
             <div class="flex flex-wrap gap-4 border-t border-slate-200 pt-8">
                 <a href="{% url 'projects' %}" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-colors">Back to Projects</a>
                 {% if project.project_url %}
