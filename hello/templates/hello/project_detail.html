@@ -104,6 +104,42 @@
                     </section>
                 </div>
             {% endif %}
+            {% if project.title == "LangChain Agent Project" %}
+                <div class="grid gap-6 mb-8">
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Project Title</h2>
+                        <p class="text-slate-600 leading-7">LangChain Agent Project</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">One-Sentence Summary</h2>
+                        <p class="text-slate-600 leading-7">Basic development of AI agent using Python and LangChain.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Business Problem</h2>
+                        <p class="text-slate-600 leading-7">Develop an Artificial Intelligence agent through Python using LangChain to connect to a chatbot.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Tools Used</h2>
+                        <p class="text-slate-600 leading-7">Python, LangChain, Google Gemini.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Key Features</h2>
+                        <p class="text-slate-600 leading-7">Interactivity.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Your Role / Contribution</h2>
+                        <p class="text-slate-600 leading-7">I coded the creation of this ChatBot and then worked with Google Gemini to implement LangChain.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Biggest Challenge</h2>
+                        <p class="text-slate-600 leading-7">Getting the agent online.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">What I Learned</h2>
+                        <p class="text-slate-600 leading-7">First introduction to in-depth AI implementation. AI can be incorporated in a variety of ways, and is capable of being a great tool if used properly.</p>
+                    </section>
+                </div>
+            {% endif %}
             <div class="flex flex-wrap gap-4 border-t border-slate-200 pt-8">
                 <a href="{% url 'projects' %}" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-colors">Back to Projects</a>
                 {% if project.project_url %}

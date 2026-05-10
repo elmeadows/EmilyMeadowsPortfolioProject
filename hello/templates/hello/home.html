@@ -1,4 +1,5 @@
 {% extends "hello/layout.html" %}
+{% load static %}
 {% block title %}
     Home
 {% endblock %}
@@ -16,15 +17,7 @@
                 </div>
             </div>
             <div class="flex-shrink-0">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-slate-100 border-4 border-blue-50 shadow-lg flex items-center justify-center">
-                    <div class="flex flex-col items-center justify-center text-slate-400">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" color="#818c96">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M 12 14 C 7.58 14 4 16.24 4 19 L 4 21 L 20 21 L 20 19 C 20 16.24 16.42 14 12 14"/>
-                        </svg>
-                        <span class="text-sm font-medium mt-2">Upload Headshot</span>
-                    </div>
-                </div>
+                <img src="{% static 'hello/headshot.JPG' %}" alt="Emily Meadows headshot" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover object-top border-4 border-blue-50 shadow-lg">
             </div>
         </div>
     </div>
