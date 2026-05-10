@@ -16,7 +16,7 @@
                 {% for project in project_list %}
                     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
                         {% if project.image_url %}
-                            <div class="h-48 bg-cover bg-center" style="background-image: url('{{ project.image_url }}');">
+                            <div class="h-48 bg-cover bg-top" style="background-image: url('{{ project.image_url }}');">
                             </div>
                         {% else %}
                             <div class="h-48 bg-slate-100 flex items-center justify-center">

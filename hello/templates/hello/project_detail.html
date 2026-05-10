@@ -6,7 +6,7 @@
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
         {% if project.image_url %}
-            <div class="h-64 sm:h-80 bg-cover bg-center" style="background-image: url('{{ project.image_url }}');"></div>
+            <div class="h-64 sm:h-80 bg-cover bg-top" style="background-image: url('{{ project.image_url }}');"></div>
         {% else %}
             <div class="h-64 sm:h-80 bg-slate-100 flex items-center justify-center">
                 <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-blue-600">
@@ -24,10 +24,93 @@
             <div class="prose max-w-none text-slate-600 mb-8">
                 {{ project.description }}
             </div>
+            {% if project.title == "Campus Skillswap" %}
+                <div class="grid gap-6 mb-8">
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Business Problem</h2>
+                        <p class="text-slate-600 leading-7">College students often have skills in their discipline and needs outside the scope of their knowledge. The goal of Campus Skillswap is to allow students to bless their community through their skills.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Key Features</h2>
+                        <p class="text-slate-600 leading-7">Personal and public dashboards, with availability, cost, services, and contact information included in each post.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">My Role</h2>
+                        <p class="text-slate-600 leading-7">I worked alongside Codex within Visual Studio Code to develop the web app. I prompted Codex to develop the structure, spent time changing the aesthetics, and provided more detailed prompts for AI to create an artificial database of pseudo-students using the dashboard.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Biggest Challenge</h2>
+                        <p class="text-slate-600 leading-7">Prompting the AI to create an aesthetically pleasing dashboard. The style Codex automatically opts for is very outdated.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">What I Learned</h2>
+                        <p class="text-slate-600 leading-7">Specificity in prompting is crucial, but even a specific prompt may not be interpreted as desired. Adjusting prompts based on what AI produced is unavoidable.</p>
+                    </section>
+                </div>
+            {% endif %}
+            {% if project.title == "Learning Log" %}
+                <div class="grid gap-6 mb-8">
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Business Problem</h2>
+                        <p class="text-slate-600 leading-7">Develop a web app that enables users to add topics or hobbies learned and track updates in learning.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Key Features</h2>
+                        <p class="text-slate-600 leading-7">Personal learning log.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">My Role</h2>
+                        <p class="text-slate-600 leading-7">I coded this website following in-class instruction. Gaps and errors were initially left, and I addressed these as necessary. I also created several unique users and tested the abilities of the learning log through these accounts.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Biggest Challenge</h2>
+                        <p class="text-slate-600 leading-7">Solving errors caused by minuscule issues in the connection between files in the Django structure.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">What I Learned</h2>
+                        <p class="text-slate-600 leading-7">Basic development process, structure of a Django web app, and how to solve problems as they arise.</p>
+                    </section>
+                </div>
+            {% endif %}
+            {% if project.title == "Media Generation" %}
+                <div class="grid gap-6 mb-8">
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">One-Sentence Summary</h2>
+                        <p class="text-slate-600 leading-7">Limited time media generation from prompts in Google Flow.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Business Problem</h2>
+                        <p class="text-slate-600 leading-7">Recreate your favorite movie scene or video game with a twist. Use Nano Banana or your preferred image generator to create ingredients for a character(s), location and style.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Tools Used</h2>
+                        <p class="text-slate-600 leading-7">Google Flow, Nano Banana.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Key Features</h2>
+                        <p class="text-slate-600 leading-7">Some parts are exactly as prompted; some parts are illogical.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">My Role</h2>
+                        <p class="text-slate-600 leading-7">I prompted the generation of this clip via Nano Banana and Google Flow based on a scene in the movie Elf.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">Biggest Challenge</h2>
+                        <p class="text-slate-600 leading-7">Copyright laws (good challenge to have); at some point the AI almost stopped listening, it did not matter how I phrased what to do, it would not have "Buddy" face the unicorn.</p>
+                    </section>
+                    <section>
+                        <h2 class="text-xl font-semibold text-slate-900 mb-2">What I Learned</h2>
+                        <p class="text-slate-600 leading-7">Best practices for AI prompting; themes and consistencies with copyright laws.</p>
+                    </section>
+                </div>
+            {% endif %}
             <div class="flex flex-wrap gap-4 border-t border-slate-200 pt-8">
-                <a href="{% url 'projects' %}" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-colors">← Back to Projects</a>
+                <a href="{% url 'projects' %}" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-colors">Back to Projects</a>
                 {% if project.project_url %}
                     <a href="{{ project.project_url }}" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">Visit Project</a>
+                {% endif %}
+                {% if project.github_url %}
+                    <a href="{{ project.github_url }}" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">GitHub</a>
                 {% endif %}
             </div>
         </div>
