@@ -50,15 +50,20 @@ def contact(request):
             message = form.cleaned_data['message']
             
             # Send the email
+            from django.conf import settings
+            from django.core.mail import EmailMessage
+            
             subject = f"New Contact Form Submission from {name}"
             body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
-            send_mail(
+            
+            email_msg = EmailMessage(
                 subject,
                 body,
-                email, # From email (using user's email might be rejected by some SMTP servers, but we'll use it as from_email for simplicity, or configure DEFAULT_FROM_EMAIL)
-                ['meadowselm@gmail.com'], # To email
-                fail_silently=False,
+                settings.DEFAULT_FROM_EMAIL, # From email MUST be the authenticated account
+                ['meadowselm@gmail.com'],    # To email
+                reply_to=[email],            # Reply-to is the person who filled out the form
             )
+            email_msg.send(fail_silently=False)
             
             messages.success(request, 'Your message has been sent successfully!')
             return redirect('contact')
