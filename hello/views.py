@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.core.mail import send_mail
-from hello.forms import ProjectForm, ContactForm
+from hello.forms import ProjectForm
 from hello.models import Project
 from django.views.generic import ListView, DetailView
 
@@ -42,35 +42,7 @@ def resume(request):
 
 def contact(request):
     """Renders the contact page."""
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            
-            # Send the email
-            from django.conf import settings
-            from django.core.mail import EmailMessage
-            
-            subject = f"New Contact Form Submission from {name}"
-            body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
-            
-            email_msg = EmailMessage(
-                subject,
-                body,
-                settings.DEFAULT_FROM_EMAIL, # From email MUST be the authenticated account
-                ['meadowselm@gmail.com'],    # To email
-                reply_to=[email],            # Reply-to is the person who filled out the form
-            )
-            email_msg.send(fail_silently=False)
-            
-            messages.success(request, 'Your message has been sent successfully!')
-            return redirect('contact')
-    else:
-        form = ContactForm()
-        
-    return render(request, "hello/contact.html", {'form': form})
+    return render(request, "hello/contact.html")
 
 def projects(request):
     """Renders the projects portfolio page."""
