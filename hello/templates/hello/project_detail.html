@@ -209,7 +209,9 @@
                 {% if project.project_url %}
                     <a href="{{ project.project_url }}" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">Visit Project</a>
                 {% endif %}
-                {% if project.github_url %}
+                {% if project.title == "Adventurers Social Media Project" %}
+                    <a href="https://github.com/elmeadows/social_media_project_emilymeadows.git" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">GitHub</a>
+                {% elif project.github_url %}
                     <a href="{{ project.github_url }}" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">GitHub</a>
                 {% endif %}
             </div>
